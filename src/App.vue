@@ -1,8 +1,13 @@
 <template>
-  <div>
-  <page-navigation></page-navigation>
-  <router-view></router-view>
+  <div class="page-container">
+    <div class="left-section">
+
+      <page-navigation></page-navigation>
+    </div>
+  <div class="right-section">
+    <router-view></router-view>
   </div>
+</div>
 </template>
 
 <script>
@@ -14,6 +19,25 @@ export default {
 </script>
 
 <style>
+.page-container{
+  display: flex;
+  height: 100vh;
+}
+.right-section{
+  flex: 1;
+  background-color: white;
+  padding: 20px;
+}
+
+.left-section {
+  flex: 1;
+  background: linear-gradient(to bottom,#0c5b8f,  #03243F);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

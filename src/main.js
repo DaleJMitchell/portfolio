@@ -2,6 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import AboutPageVue from './components/AboutPage.vue';
+import ProjectPageVue from './components/ProjectPage.vue';
+import ContactPageVue from './components/ContactPage.vue';
 
 // Vue.config.productionTip = false
 
@@ -17,6 +19,14 @@ const routes = [
     path: '/about',
     component: AboutPageVue,
   },
+  {
+    path: '/project',
+    component: ProjectPageVue,
+  },
+  {
+    path: '/contact',
+    component: ContactPageVue
+  }
 ];
 
 const router = new VueRouter({

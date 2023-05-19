@@ -1,55 +1,48 @@
 <template>
   <div class="page-container">
-    <div class="left-section">
+    
       <div class="navigation-buttons">
-        <a href="#home" class="home">Home</a>
-        <a href="#news" class="news">News</a>
-        <a href="#contact" class="contact">Contact</a>
-        <a href="#about" class="about">About</a>
-    </div>
+        <router-link class="home" to="/">Home</router-link>
+        <router-link class="project" to="/project">Projects</router-link>
+        <router-link class="contact" to="/contact">Contact</router-link>
+        <router-link class="about" to="/about">About</router-link>
+      </div>    
       <div class="logo-container">
         <img src="../assets/2023.03.28 Dale Mitchel Headshot-square-centered.jpg" alt="Dale Mitchell Headshot" class="rounded-full w-full">
       </div>
-    </div>
-    <div class="right-section">
-    </div>
+    
+    
   </div>
 </template>
 
 <script>
 export default {
   name: "PageNavigation",
-  methods: {
-    navigateToHomePage() {
-      this.$router.push('/home');
-    },
-    navigateToNewsPage() {
-      this.$router.push('/news');
-    },
-    navigateToContactPage() {
-      this.$router.push('/contact');
-    },
-    navigateToAboutPage() {
-      this.$router.push('/about');
-    }
-  }
+  // methods: {
+  //   navigateToHomePage() {
+  //     this.$router.push('/home');
+  //   },
+  //   navigateToNewsPage() {
+  //     this.$router.push('/news');
+  //   },
+  //   navigateToContactPage() {
+  //     this.$router.push('/contact');
+  //   },
+  //   navigateToAboutPage() {
+  //     this.$router.push('/about');
+  //   }
+  // }
 }
 </script>
 
 <style>
 .page-container{
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   display: flex;
   height: 100vh;
 }
 
-.left-section {
-  flex: 1;
-  background-color: gray;
-  /* padding: 20px; */
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end
-}
+
 .navigation-buttons{
   display: flex;
   flex-direction: column;
@@ -58,7 +51,7 @@ export default {
 
 .navigation-buttons a {
   margin-bottom: 5px;
-  color: black;
+  color: white;
   text-decoration: none;
   padding: 20px; 
   border: 1px solid transparent;
@@ -77,7 +70,7 @@ export default {
   color: red; /* Color when hovering home */
 }
 
-.navigation-buttons a.news:hover {
+.navigation-buttons a.project:hover {
   color: green; /* Color when hovering news */
 }
 
@@ -85,15 +78,11 @@ export default {
   color: blue; /* Color when hovering contact */
 }
 
-.navigation-buttons a.about:hover {
-  color: purple; /* Color when hovering about */
+.navigation-buttons .about:hover {
+  color: rgb(197, 4, 207); /* Color when hovering about */
 }
 
-.right-section{
-  flex: 1;
-  background-color: white;
-  padding: 20px;
-}
+
 
 
 .logo-container {
